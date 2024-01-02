@@ -1,9 +1,19 @@
 import React from "react";
 
-function NavBar() {
-  const links = ["home", "about", "projects"];
+function NavBar(props) {
+  const links = ["home","about","projects"]
 
-  return <nav>{/* display an <a> tag for each link here */}</nav>;
+  return <nav>{ 
+    <div>
+      <nav>
+        {links.map((link)=> (
+          <a key= {link} href={"#"+link}>{link}</a>
+        ))}
+      </nav>
+    </div>
+    
+    
+    /* display an <a> tag for each link here */}</nav>;
 }
 
-export default NavBar;
+export default NavBar
